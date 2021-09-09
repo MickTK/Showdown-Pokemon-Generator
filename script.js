@@ -16,8 +16,9 @@ $(document).ready(function(){
 function generate(){
     pokemon.id = retrieve_pokemon_id();
     pokemon = retrieve_pokemon(pokemon.id);
-    $("#name").text(pokemon.name);
-    $('#img').attr("src","https://play.pokemonshowdown.com/sprites/ani/" + pokemon.name.split('-')[0] + ".gif");
+    pokemon.name = pokemon.name.split('-')[0];
+    $("#name").text(pokemon.name.toUpperCase());
+    $('#img').attr("src","https://play.pokemonshowdown.com/sprites/ani/" + pokemon.name + ".gif");
     console.log(pokemon);
 }
 

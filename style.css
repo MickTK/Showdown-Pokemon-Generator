@@ -1,14 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
 * {
     background-color: black;
     color: white;
     text-align: center;
+    font-family: 'Roboto', sans-serif;
 }
 
-name {
+#name {
 
 }
 
-img-container {
+#img-container {
     margin: auto;
-    border: 1px solid blue;
+    display: inline-block
+    background-color: gray;
+    border-radius: 0 5px 0 5px;
+    padding: 20px;
+}
+
+#img {
+    background-color: gray;
 }
