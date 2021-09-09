@@ -194,9 +194,7 @@ function retrieve_pokemon(id){
 // Copy pokemon stats
 function copy() {
     var copyText = document.getElementById("pokemon-stats");
-  
     copyText.select();
     copyText.setSelectionRange(0, 99999);
-  
     navigator.clipboard.writeText(copyText.value);
 }
