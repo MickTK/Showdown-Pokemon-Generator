@@ -1,15 +1,24 @@
-var pokemon_id;
 var pokemon;
 
+class Pokemon{
+    constructor(){
+        this.id = undefined;
+        this.name = undefined;
+    }
+}
+
 $(document).ready(function(){
+    pokemon = new Pokemon()
+
     generate();
 });
 
 function generate(){
-    pokemon_id = retrieve_pokemon_id();
-    pokemon = retrieve_pokemon(pokemon_id);
+    pokemon.id = retrieve_pokemon_id();
+    pokemon = retrieve_pokemon(pokemon.id);
     $("#name").text(pokemon.name);
-    $('#img').attr("src","https://play.pokemonshowdown.com/sprites/ani/" + pokemon.name + ".gif");
+    $('#img').attr("src","https://play.pokemonshowdown.com/sprites/ani/" + pokemon.name.split('-')[0] + ".gif");
+    console.log(pokemon);
 }
 
 function randomNum(min, max) {

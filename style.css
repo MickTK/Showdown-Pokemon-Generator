@@ -3,3 +3,12 @@
     color: white;
     text-align: center;
 }
+
+name {
+
+}
+
+img-container {
+    margin: auto;
+    border: 1px solid blue;
+}
