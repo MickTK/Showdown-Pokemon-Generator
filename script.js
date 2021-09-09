@@ -1,4 +1,6 @@
 var pokemon;
+var dex_dim = 898;
+var research_name;
 
 class Pokemon{
     constructor(){
@@ -14,33 +16,16 @@ $(document).ready(function(){
 });
 
 function generate(){
-    pokemon.id = retrieve_pokemon_id();
+    pokemon.id = randomNum(0, dex_dim-1);
     pokemon = retrieve_pokemon(pokemon.id);
-    pokemon.name = pokemon.name;
+    research_name = pokemon.name.replace('-', '');
     $("#name").text(pokemon.name.toUpperCase());
-    $('#img').attr("src","https://play.pokemonshowdown.com/sprites/ani/" + pokemon.name + ".gif");
+    $('#img').attr("src","https://play.pokemonshowdown.com/sprites/ani/" + research_name + ".gif");
     console.log(pokemon);
 }
 
 function randomNum(min, max) {
 	return Math.floor(Math.random() * (max - min)) + min;
-}
-
-function retrieve_pokemon_id(){
-    var a;
-    var dex_dim = 898;
-
-    $.ajax({ 
-        type: 'GET', 
-        url: 'https://pokeapi.co/api/v2/pokemon/',
-        async: false,
-        data: {},
-        dataType: 'json',
-        success: function (data) {
-            a = randomNum(0, dex_dim-1);
-        }
-    });
-    return a;
 }
 
 function retrieve_pokemon(id){
