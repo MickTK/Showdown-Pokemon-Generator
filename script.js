@@ -126,7 +126,7 @@ class Pokemon{
 }
 
 $(document).ready(function(){
-    pokemon = new Pokemon()
+    pokemon = new Pokemon();
 
     generate();
 });
@@ -176,4 +176,22 @@ function retrieve_pokemon(id){
         }
     });
     return a;
+}
+
+function copy() {
+    var copyText = document.getElementById("pokemon-stats");
+  
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+  
+    navigator.clipboard.writeText(copyText.value);
+}
+
+function roll(){
+    pokemon = new Pokemon();
+    $('#name').css({'color':'white'});
+    $("#name").text("?");
+    $('#img').attr("src", "");
+    $("pokemon-stats").val("");
+    generate();
 }
