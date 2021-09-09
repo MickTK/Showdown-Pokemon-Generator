@@ -188,6 +188,7 @@ function copy() {
 }
 
 function roll(){
+    console.clear();
     pokemon = new Pokemon();
     $('#name').css({'color':'white'});
     $("#name").text("?");
