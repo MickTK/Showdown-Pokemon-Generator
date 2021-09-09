@@ -1,10 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 * {
-    background-color: black;
+    background-color: rgb(24, 24, 24);
     color: white;
     text-align: center;
     font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    margin: auto;
+    align-items: center;
+}
+.main {
+    height: 100%;
+    width: 100%;
+    display: table;
+}
+.wrapper {
+    display: table-cell;
+    height: 100%;
+    vertical-align: middle;
 }
 
 #name {
@@ -13,12 +29,19 @@
 
 #img-container {
     margin: auto;
-    display: inline-block
-    background-color: gray;
-    border-radius: 0 5px 0 5px;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    border-radius: 0 20px 0 20px;
+    border: 3px solid rgb(99, 99, 99);
     padding: 20px;
+    align-items: center;
 }
 
 #img {
-    background-color: gray;
+    margin: auto;
+}
+
+@media only screen and (max-width: 980px){
+    
 }

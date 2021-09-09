@@ -16,7 +16,7 @@ $(document).ready(function(){
 function generate(){
     pokemon.id = retrieve_pokemon_id();
     pokemon = retrieve_pokemon(pokemon.id);
-    pokemon.name = pokemon.name.split('-')[0];
+    pokemon.name = pokemon.name;
     $("#name").text(pokemon.name.toUpperCase());
     $('#img').attr("src","https://play.pokemonshowdown.com/sprites/ani/" + pokemon.name + ".gif");
     console.log(pokemon);
@@ -28,6 +28,8 @@ function randomNum(min, max) {
 
 function retrieve_pokemon_id(){
     var a;
+    var dex_dim = 898;
+
     $.ajax({ 
         type: 'GET', 
         url: 'https://pokeapi.co/api/v2/pokemon/',
@@ -35,7 +37,7 @@ function retrieve_pokemon_id(){
         data: {},
         dataType: 'json',
         success: function (data) {
-            a = randomNum(0, data.count-1);
+            a = randomNum(0, dex_dim-1);
         }
     });
     return a;
