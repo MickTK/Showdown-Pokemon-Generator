@@ -139,9 +139,9 @@ function generate(){
 
     if(randomNum(0, 10) == 0){
         pokemon.shiny = true;
-        $("#name").text(pokemon.link.name.toUpperCase() + " *");
+        $('#name').css({'color':'gold'});
     }
-    else
+    
     $("#name").text(pokemon.link.name.toUpperCase());
 
     if(pokemon.shiny)
@@ -152,6 +152,7 @@ function generate(){
     pokemon.build();
     
     $("#pokemon-stats").val(pokemon.make());
+    console.log(pokemon.make());
 }
 
 function randomNum(min, max) {

@@ -54,8 +54,12 @@ html, body {
     text-align: left;
     width: 100%;
     height: 100%;
+    resize: none;
+    border: 0;
 }
 
 @media only screen and (max-width: 980px){
-    
+    .wrapper {
+        width: 75%;
+    }
 }
