@@ -1,2 +1,3 @@
 # Pokemon Generator
-[link](https://micktk.github.io/PokemonGenerator/)
+WIP Random Pokémon Generator
+Compatible with Pokémon Showdown
