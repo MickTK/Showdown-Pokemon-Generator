@@ -135,11 +135,12 @@ $(document).ready(function(){
 
 // Core function
 function generate(){
+    // Reset
     console.clear();
     pokemon = new Pokemon();
     $('#name').css({'color':'white'});
     $("#name").text("?");
-    $('#img').attr("src", "");
+    $('#img').attr("src", "https://hotelgenziana.com/gfx/loading.gif");
     $("pokemon-stats").val("");
 
     pokemon.id = randomNum(0, dex_dim);
