@@ -1,3 +1,3 @@
 # Pokemon Generator
-WIP Random Pokémon Generator
-Compatible with Pokémon Showdown
+WIP Random Pokémon Generator <br>
+Compatible with Pokémon Showdown <br>
